@@ -21,7 +21,7 @@ public class Main {
         ImageIcon iFacebook1 = new ImageIcon("resources/images/facebook1.png");
         ImageIcon iTwitter1 = new ImageIcon("resources/images/twitter1.png");
         ImageIcon iYoutube1 = new ImageIcon("resources/images/youtube1.png");
-        ImageIcon iSvg1 = new ImageIcon("resources/images/imagen1.png");
+        ImageIcon iImg = new ImageIcon("resources/images/imagen1.png");
         ImageIcon iCerrar = new ImageIcon("resources/images/cerrar.png");
 
         JFrame ventana = new JFrame("Componentes básicos de la interfaz gráfica");
@@ -38,14 +38,11 @@ public class Main {
         pDerecho.setLayout(null);
         ventana.add(pDerecho);
 
-        ImageIcon iDimAux = new ImageIcon(
-                iLogo.getImage()
-                        .getScaledInstance(40, 40, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lLogo = new JLabel();
         lLogo.setBounds(50, 20, 40, 40);
-        lLogo.setIcon(iDimAux);
+        lLogo.setIcon(new ImageIcon(
+                iLogo.getImage().getScaledInstance(40, 40, Image.SCALE_AREA_AVERAGING)
+        ));
         pIzquierdo.add(lLogo);
 
         JLabel lTituloApp = new JLabel("Login de usuario");
@@ -54,14 +51,11 @@ public class Main {
         lTituloApp.setFont(fuenteTituloPrincipal);
         pIzquierdo.add(lTituloApp);
 
-        iDimAux = new ImageIcon(
-                iSvg1.getImage()
-                        .getScaledInstance(600, 414, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lSvg1 = new JLabel();
         lSvg1.setBounds(150, 120, 600, 414);
-        lSvg1.setIcon(iDimAux);
+        lSvg1.setIcon(new ImageIcon(
+                iImg.getImage().getScaledInstance(600, 414, Image.SCALE_AREA_AVERAGING)
+        ));
         pIzquierdo.add(lSvg1);
 
         JLabel lEslogan = new JLabel("Te ayudamos con todo"); // etiqueta de texto
@@ -85,24 +79,18 @@ public class Main {
         lNotificaciones.setHorizontalAlignment(JLabel.CENTER);
         pDerecho.add(lNotificaciones);
 
-        iDimAux = new ImageIcon(
-                iUsuario2.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lUsuario = new JLabel();
         lUsuario.setBounds(40, 200, 30, 30);
-        lUsuario.setIcon(iDimAux);
+        lUsuario.setIcon(new ImageIcon(
+                iUsuario2.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         pDerecho.add(lUsuario);
-
-        iDimAux = new ImageIcon(
-                iClave2.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
 
         JLabel lClave = new JLabel();
         lClave.setBounds(40, 270, 30, 30);
-        lClave.setIcon(iDimAux);
+        lClave.setIcon(new ImageIcon(
+                iClave2.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         pDerecho.add(lClave);
 
         JTextField tNombreUsuario = new JTextField("Nombre de usuario");
@@ -141,32 +129,26 @@ public class Main {
         bEntrar.setCursor(cMano);
         pDerecho.add(bEntrar);
 
-        iDimAux = new ImageIcon(
-                iCerrar.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
-
         JButton bCerrar = new JButton();
-        bCerrar.setBounds(350, 10, 45, 30);
+        bCerrar.setBounds(350, 15, 45, 30);
         bCerrar.setFocusable(false);
         bCerrar.setBackground(Color.BLUE);
         bCerrar.setForeground(Color.WHITE);
         bCerrar.setCursor(cMano);
-        bCerrar.setIcon(iDimAux);
+        bCerrar.setIcon(new ImageIcon(
+                iCerrar.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         bCerrar.setContentAreaFilled(false);
         bCerrar.setFocusable(false);
         bCerrar.setBorder(null);
         pDerecho.add(bCerrar);
 
-        iDimAux = new ImageIcon(
-                iPunto1.getImage()
-                        .getScaledInstance(20, 20, Image.SCALE_AREA_AVERAGING)
-        );
-
         JButton bOpcion1 = new JButton();
         bOpcion1.setBounds(32, 250, 30, 20);
         bOpcion1.setCursor(cMano);
-        bOpcion1.setIcon(iDimAux);
+        bOpcion1.setIcon(new ImageIcon(
+                iPunto1.getImage().getScaledInstance(20, 20, Image.SCALE_AREA_AVERAGING)
+        ));
         bOpcion1.setContentAreaFilled(false);
         bOpcion1.setFocusable(false);
         bOpcion1.setBorder(null);
@@ -175,7 +157,9 @@ public class Main {
         JButton bOpcion2 = new JButton();
         bOpcion2.setBounds(32, 300, 30, 20);
         bOpcion2.setCursor(cMano);
-        bOpcion2.setIcon(iDimAux);
+        bOpcion2.setIcon(new ImageIcon(
+                iPunto1.getImage().getScaledInstance(20, 20, Image.SCALE_AREA_AVERAGING)
+        ));
         bOpcion2.setContentAreaFilled(false);
         bOpcion2.setFocusable(false);
         bOpcion2.setBorder(null);
@@ -184,53 +168,43 @@ public class Main {
         JButton bOpcion3 = new JButton();
         bOpcion3.setBounds(32, 350, 30, 20);
         bOpcion3.setCursor(cMano);
-        bOpcion3.setIcon(iDimAux);
+        bOpcion3.setIcon(new ImageIcon(
+                iPunto1.getImage().getScaledInstance(20, 20, Image.SCALE_AREA_AVERAGING)
+        ));
         bOpcion3.setContentAreaFilled(false);
         bOpcion3.setFocusable(false);
         bOpcion3.setBorder(null);
         pIzquierdo.add(bOpcion3);
 
-        iDimAux = new ImageIcon(
-                iFacebook1.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lFacebook = new JLabel();
         lFacebook.setBounds(30, 630, 30, 30);
-        lFacebook.setIcon(iDimAux);
+        lFacebook.setIcon(new ImageIcon(
+                iFacebook1.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         lFacebook.setCursor(cMano);
         pIzquierdo.add(lFacebook);
 
-        iDimAux = new ImageIcon(
-                iTwitter1.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lTwitter = new JLabel();
         lTwitter.setBounds(80, 630, 30, 30);
-        lTwitter.setIcon(iDimAux);
+        lTwitter.setIcon(new ImageIcon(
+                iTwitter1.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         lTwitter.setCursor(cMano);
         pIzquierdo.add(lTwitter);
 
-        iDimAux = new ImageIcon(
-                iYoutube1.getImage()
-                        .getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lYoutube = new JLabel();
         lYoutube.setBounds(130, 630, 30, 30);
-        lYoutube.setIcon(iDimAux);
+        lYoutube.setIcon(new ImageIcon(
+                iYoutube1.getImage().getScaledInstance(30, 30, Image.SCALE_AREA_AVERAGING)
+        ));
         lYoutube.setCursor(cMano);
         pIzquierdo.add(lYoutube);
 
-        iDimAux = new ImageIcon(
-                iFondo.getImage()
-                        .getScaledInstance(720, 720, Image.SCALE_AREA_AVERAGING)
-        );
-
         JLabel lFondo = new JLabel();
         lFondo.setBounds(0, 0, 720, 720);
-        lFondo.setIcon(iDimAux);
+        lFondo.setIcon(new ImageIcon(
+                iFondo.getImage().getScaledInstance(721, 721, Image.SCALE_AREA_AVERAGING)
+        ));
         pIzquierdo.add(lFondo);
 
         JRadioButton checkNo = new JRadioButton("No");
@@ -253,6 +227,7 @@ public class Main {
         ventana.setLayout(null); // layout null
         ventana.setLocationRelativeTo(null); // centrar ventana
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // para terminar ejecución al cerrar
+        ventana.setUndecorated(true); // elimina barra superior por defecto
         ventana.setVisible(true); // hacer ventana visible
     }
 }
